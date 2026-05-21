@@ -1,4 +1,3 @@
-import logo from "/Users/nikhiljain/Desktop/Coding Projects/Portfolio/public/Nikhil Jain Profile Image.png";
 import Image from "next/image"
 
 const HeroImage = ()  => {
@@ -8,8 +7,8 @@ const HeroImage = ()  => {
     return(
         <>
           <Image
-          src={logo}
-          alt="logo"
+          src="/Nikhil Jain Profile Image.png"
+          alt="Nikhil Jain"
           loading="eager"
           priority
           height={1000}
