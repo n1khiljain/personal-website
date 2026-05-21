@@ -1,18 +1,6 @@
 "use client"
 import { cn } from "@/lib/utils";
-
-
-import {
-  Briefcase,
-  FolderGit2,
-  GraduationCap,
-  HomeIcon,
-  LightbulbIcon,
-  Mail,
-  MoreHorizontal,
- 
-  User,
-} from 'lucide-react';
+import { Icon } from "@iconify/react";
 
 import { Dock, DockIcon, DockItem, DockLabel } from '@/components/animation/DockAnimation';
 
@@ -27,52 +15,45 @@ const Navbar = () => {
     {
       title: 'Home',
       icon: (
-        <HomeIcon className='h-full w-full ' />
+        <Icon icon="solar:home-2-bold-duotone" className='h-full w-full ' />
       ),
       href: '/',
     },
     {
       title: 'About',
       icon: (
-        <User className='h-full w-full ' />
+        <Icon icon="solar:user-rounded-bold-duotone" className='h-full w-full ' />
       ),
       href: '/about',
     },
     {
       title: 'Skills',
       icon: (
-        <LightbulbIcon className='h-full w-full ' />
+        <Icon icon="solar:lightbulb-bolt-bold-duotone" className='h-full w-full ' />
       ),
       href: '/skills',
     },
     {
       title: 'Education',
       icon: (
-        <GraduationCap className='h-full w-full ' />
+        <Icon icon="solar:square-academic-cap-bold-duotone" className='h-full w-full ' />
       ),
       href: '/education',
     },
     {
       title: 'Projects',
       icon: (
-        <FolderGit2 className='h-full w-full ' />
+        <Icon icon="solar:folder-with-files-bold-duotone" className='h-full w-full ' />
       ),
       href: '/projects',
     },
    
     {
-      title: 'Contact us',
+      title: 'Contact me',
       icon: (
-        <Mail className='h-full w-full ' />
+        <Icon icon="solar:letter-bold-duotone" className='h-full w-full ' />
       ),
       href: '/contact',
-    },
-    {
-      title: 'More',
-      icon: (
-        <MoreHorizontal className='h-full w-full ' />
-      ),
-      href: '/more',
     },
   ];
   const [scrolling, setScrolling] = useState(false);
@@ -106,7 +87,7 @@ const Navbar = () => {
           className={cn("aspect-square rounded-full bg-gray-200 dark:bg-neutral-800",pathname === item.href && " bg-gray-100 !border !border-primary-sky")}
           >
           <DockLabel >{item.title}</DockLabel>
-          <DockIcon className={cn(pathname === item.href && "text-[#2f7df4]")}>{item.icon}</DockIcon>
+          <DockIcon className={cn(pathname === item.href && "text-primary-sky")}>{item.icon}</DockIcon>
         </DockItem>
           </Link>
       ))}

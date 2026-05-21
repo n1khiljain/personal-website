@@ -1,4 +1,4 @@
-import logo from "../../public/portfolioLogo.png";
+import logo from "/Users/nikhiljain/Desktop/Coding Projects/Portfolio/public/Nikhil Jain Profile Image.png";
 import Image from "next/image"
 
 const HeroImage = ()  => {
@@ -14,6 +14,7 @@ const HeroImage = ()  => {
           priority
           height={1000}
           width={1000}
+          className="rounded-3xl border-2 border-neutral-800 shadow-lg"
         />
         </>
     )

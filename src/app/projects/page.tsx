@@ -17,11 +17,7 @@ const projectsPage = () => {
         <Heading>My Projects</Heading>
         <FramerWrapper y={0} x={200}>
           <p className=" font-poppins text-lg w-full text-primary max-sm:text-base">
-            I love to Build Cool Projects. Here, you&#x27;ll find a curated
-            collection of my creative endeavors and technical projects. Each
-            piece represents a journey of innovation, problem-solving, and
-            continuous learning. Feel free to explore this showcase of my
-            passion and expertise in action.
+            I build at the intersection of robotics, ML, and Web3. Feel free to poke around.
           </p>
         </FramerWrapper>
       </div>

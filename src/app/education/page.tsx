@@ -38,6 +38,28 @@ const educationPage = () => {
               <p className="font-poppins text-base w-full text-primary max-sm:text-xs">
                 {edu.description}
               </p>
+              {edu.courses?.length ? (
+                <div className="mt-4">
+                  <h3 className="font-rubik text-lg text-primary max-sm:text-base">
+                    Relevant Coursework
+                  </h3>
+                  <div className="mt-3 grid grid-cols-2 gap-3 max-md:grid-cols-1">
+                    {edu.courses.map((course) => (
+                      <div
+                        key={course.code}
+                        className="rounded-lg border border-border bg-card p-3 shadow-sm"
+                      >
+                        <div className="font-rubik text-sm text-primary-sky">
+                          {course.code}
+                        </div>
+                        <div className="font-poppins text-sm text-primary">
+                          {course.name}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
             </FramerWrapper>
           </div>
         ))}

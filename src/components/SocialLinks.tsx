@@ -1,11 +1,5 @@
 import { cn } from "@/lib/utils";
-import {
-  Facebook,
-  Linkedin,
-  Twitter,
-  ExternalLink,
-  Github,
-} from "lucide-react";
+import { Icon } from "@iconify/react";
 import { buttonVariants } from "./ui/button";
 import Link from "next/link";
 import FramerWrapper from "./animation/FramerWrapper";
@@ -16,27 +10,22 @@ const SocialLinks = () => {
     {
       name: "Facebook",
       link: portfolioConfig.socialLinks.facebook,
-      icon: <Facebook />,
+      icon: "logos:facebook",
     },
     {
       name: "Twitter",
       link: portfolioConfig.socialLinks.twitter,
-      icon: <Twitter />,
+      icon: "prime:twitter",
     },
     {
       name: "Linkedin",
       link: portfolioConfig.socialLinks.linkedin,
-      icon: <Linkedin />,
-    },
-    {
-      name: "External",
-      link: portfolioConfig.socialLinks.external,
-      icon: <ExternalLink />,
+      icon: "skill-icons:linkedin",
     },
     {
       name: "Github",
       link: portfolioConfig.socialLinks.github,
-      icon: <Github />,
+      icon: "mdi:github",
     },
   ];
   return (
@@ -53,7 +42,7 @@ const SocialLinks = () => {
                 buttonVariants({ variant: "outline", size: "icon" })
               )}
             >
-              {itm.icon}
+              <Icon icon={itm.icon} className="h-5 w-5" />
             </Link>
           </FramerWrapper>
         );

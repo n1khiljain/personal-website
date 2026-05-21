@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Icon } from "@iconify/react";
 import React from "react";
 
 interface MyComponentProps {
@@ -16,11 +16,7 @@ const SkillsFooter: React.FC<MyComponentProps> = ({ items }) => {
             key={index} 
             className="flex flex-col items-center justify-center gap-2 p-4 rounded-lg hover:bg-accent transition-colors"
           >
-            <img 
-              src={item.icon} 
-              alt={item.name} 
-              className="w-12 h-12 object-contain"
-            />
+            <Icon icon={item.icon ?? ""} className="h-12 w-12" />
             <span className="text-sm text-center font-medium text-muted-foreground">
               {item.name}
             </span>

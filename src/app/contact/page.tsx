@@ -10,7 +10,7 @@ const contactPage = () => {
     <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
       <Badge variant="secondary" className="gap-1.5 py-1 ">
         <Phone className="h-4 w-4" />
-        Contact Us
+        Contact Me
       </Badge>
       <div className="flex flex-col gap-3 w-full">
         <Heading>Contact Me!</Heading>
